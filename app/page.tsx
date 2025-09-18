@@ -168,16 +168,19 @@ export default function BrainBloomHome() {
           {notes.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-20 sm:mb-24">
               {notes.map((note, index) => (
-                <NoteCard
+                <div
                   key={note.id}
-                  note={note}
-                  onClick={() => {
-                    setCurrentNoteId(note.id)
-                    setCurrentView("editor")
-                  }}
-                  className={`animate-in slide-in-from-bottom-4 fade-in duration-500`}
                   style={{ animationDelay: `${index * 100}ms` }}
-                />
+                >
+                  <NoteCard
+                    note={note}
+                    onClick={() => {
+                      setCurrentNoteId(note.id)
+                      setCurrentView("editor")
+                    }}
+                    className="animate-in slide-in-from-bottom-4 fade-in duration-500"
+                  />
+                </div>
               ))}
             </div>
           ) : (
