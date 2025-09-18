@@ -1,30 +1,38 @@
-# Soft UI design
+# sv
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/junior-s-projects-10176ca6/v0-brain-bloom-00)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/JYGBdj4uQSZ)
+## Creating a project
 
-## Overview
+If you're seeing this, you've probably already done this step. Congrats!
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+```sh
+# create a new project in the current directory
+npx sv create
 
-## Deployment
+# create a new project in my-app
+npx sv create my-app
+```
 
-Your project is live at:
+## Developing
 
-**[https://vercel.com/junior-s-projects-10176ca6/v0-brain-bloom-00](https://vercel.com/junior-s-projects-10176ca6/v0-brain-bloom-00)**
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Build your app
+```sh
+npm run dev
 
-Continue building your app on:
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-**[https://v0.app/chat/projects/JYGBdj4uQSZ](https://v0.app/chat/projects/JYGBdj4uQSZ)**
+## Building
 
-## How It Works
+To create a production version of your app:
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
